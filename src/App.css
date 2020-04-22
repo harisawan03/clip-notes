@@ -3,7 +3,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #181c24;
   min-height: 1vh;
   display: flex;
   flex-direction: column;
@@ -13,7 +13,8 @@
   color: white;
 }
 
-#App-name {
+.App-name {
   margin-top: 5px;
+  margin-bottom: 5px;
   margin-left: 10px;
 }

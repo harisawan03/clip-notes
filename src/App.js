@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <p id="App-name">
+        <p className="App-name">
           CLIP NOTES
         </p>
       </header>
