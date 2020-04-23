@@ -2,18 +2,25 @@ import React from 'react';
 
 // take state of notepad and format it
 export default class Format extends React.Component {
-  constructo(props) {
+  constructor(props) {
     super(props);
 
-    this.handleFormatting = this.handleFormatting.bind(this);
+    this.handleEnter = this.handleEnter.bind(this);
   }
 
-  handleFormatting(e) {
-    const formatted = e.target.value;
-    this.props.handleUserNotes(formatted);
+  handleEnter(e) {
+    //let enter = e.target.value;
+    if (e.key === 13) {
+      let newLine = document.createElement('br');
+      let position = document.getElementsByTagName('p')[0];
+      position.appendChild(newLine);
+    }
+    //this.props.onChange(enter);
   }
   
   render() {
-    return();
+    return(
+    <p onChange={this.handleEnter}>{this.props.notes}<br></br></p>
+    );
   }
 }

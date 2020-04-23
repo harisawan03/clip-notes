@@ -1,6 +1,6 @@
 import React from 'react';
 import './Notepad.css';
-import { Format } from './Format'
+import Format from './Format'
 
 export default class Notepad extends React.Component {
   constructor(props) {
@@ -21,16 +21,18 @@ export default class Notepad extends React.Component {
   render() {
     return(
       <div className="Notepad">
-        <Format notes={this.state.userNotes} onChange={this.handleUserNotes} />
         <textarea
           className="Notes-edit"
           type="text"
           onChange={this.handleUserNotes}
           value={this.state.userNotes}        
         />
-        <p className="Notes-display">
-          {this.state.userNotes}
-        </p>
+        <div id='notes' className="Notes-display">
+          <Format
+            notes={this.state.userNotes}
+            onChange={this.handleUserNotes} 
+          /> 
+        </div>
       </div>
     );
   }
