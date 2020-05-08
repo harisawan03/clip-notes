@@ -1,26 +1,28 @@
-import React from 'react';
+import React from 'react'
 
 // take state of notepad and format it
 export default class Format extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
 
-    this.handleEnter = this.handleEnter.bind(this);
+    this.handleEnter = this.handleEnter.bind(this)
   }
 
+  // can't listen for key press since copy/paste is important
+  // use .replace()
   handleEnter(e) {
-    //let enter = e.target.value;
-    if (e.key === 13) {
-      let newLine = document.createElement('br');
-      let position = document.getElementsByTagName('p')[0];
-      position.appendChild(newLine);
-    }
-    //this.props.onChange(enter);
+    e.target.replace(/(?:\r\n|\r|\n)/g, '<br>')
   }
-  
+
+
   render() {
-    return(
-    <p onChange={this.handleEnter}>{this.props.notes}<br></br></p>
-    );
+    return(  
+      <p 
+        className="Notes-display"
+        onChange={this.handleEnter}
+      >
+        {this.props.notes}
+      </p>
+    )
   }
 }

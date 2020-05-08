@@ -1,21 +1,21 @@
-import React from 'react';
-import './Notepad.css';
+import React from 'react'
+import './Notepad.css'
 import Format from './Format'
 
 export default class Notepad extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       userNotes: ''
-    };
+    }
 
-    this.handleUserNotes = this.handleUserNotes.bind(this);
+    this.handleUserNotes = this.handleUserNotes.bind(this)
   }
 
   handleUserNotes(e) {
     this.setState ({
       userNotes: e.target.value
-    });
+    })
   }
 
   render() {
@@ -27,13 +27,8 @@ export default class Notepad extends React.Component {
           onChange={this.handleUserNotes}
           value={this.state.userNotes}        
         />
-        <div id='notes' className="Notes-display">
-          <Format
-            notes={this.state.userNotes}
-            onChange={this.handleUserNotes} 
-          /> 
-        </div>
+        <Format notes={this.state.userNotes} />
       </div>
-    );
+    )
   }
 }
