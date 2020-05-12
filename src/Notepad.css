@@ -28,6 +28,8 @@
   max-width: 35vw;
   float: right;
   padding: 10px;
+  resize: none;
   border: 0;
   border-radius: 10px;
+  outline: 0;
 }
