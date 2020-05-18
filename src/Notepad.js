@@ -26,7 +26,7 @@ export default class Notepad extends React.Component {
           onChange={this.handleUserNotes}
           value={this.state.userNotes}        
         />
-        <textarea readonly
+        <textarea readOnly
           className="Notes-display"
           value={this.state.userNotes}
         />
