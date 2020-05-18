@@ -8,7 +8,10 @@ export default class Format extends React.Component {
 
   render() {
     return(  
-      null
+      <textarea readOnly
+        className="Notes-display"
+        value={this.props.notes}
+      />
     )
   }
 }

@@ -1,5 +1,7 @@
 import React from 'react'
 import './Notepad.css'
+import Format from './Format.js'
+import Edit from './Edit.js'
 
 export default class Notepad extends React.Component {
   constructor(props) {
@@ -8,27 +10,24 @@ export default class Notepad extends React.Component {
       userNotes: ''
     }
 
-    this.handleUserNotes = this.handleUserNotes.bind(this)
+    this.handleNoteChange = this.handleNoteChange.bind(this)
   }
 
-  handleUserNotes(e) {
-    this.setState ({
-      userNotes: e.target.value
+  handleNoteChange(notes) {
+    this.setState({
+      userNotes: notes
     })
   }
 
   render() {
     return(
       <div className="Notepad">
-        <textarea
-          className="Notes-edit"
-          type="text"
-          onChange={this.handleUserNotes}
-          value={this.state.userNotes}        
+        <Edit 
+          notes={this.state.userNotes}
+          onNoteChange={this.handleNoteChange}
         />
-        <textarea readOnly
-          className="Notes-display"
-          value={this.state.userNotes}
+        <Format 
+          notes={this.state.userNotes}
         />
       </div>
     )
