@@ -1,6 +1,5 @@
 import React from 'react'
 
-// take state of notepad and format it
 export default class Edit extends React.Component {
   constructor(props) {
     super(props)

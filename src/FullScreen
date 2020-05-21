@@ -1,0 +1,20 @@
+import React from 'react'
+
+export default class FullScreen extends React.Component {
+  constructor(props) {
+    super(props)
+  
+    this.handleSizing = this.handleSizing.bind(this)
+  }
+
+  handleSizing(e) {
+    
+  }
+  
+  render() {
+    <button
+      value="<>"
+      onClick={handleSizing}
+    />
+  }
+}
