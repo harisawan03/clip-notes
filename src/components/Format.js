@@ -5,7 +5,7 @@ import FullScreen from './FullScreen.js'
 export default class Format extends React.Component {
   render() {
     return(
-      <div className="Display-canvas">
+      <div className="Control-display">
         <textarea readOnly
           className="Notes-display"
           value={this.props.notes}

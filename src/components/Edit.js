@@ -14,7 +14,7 @@ export default class Edit extends React.Component {
 
   render() {
     return(
-      <div className="Edit-canvas">
+      <div className="Control-edit">
         <textarea
           className="Notes-edit"
           type="text"

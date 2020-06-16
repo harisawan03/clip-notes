@@ -5,7 +5,7 @@
   padding-top: 20px;
 }
 
-.Notes-edit {
+.Control-edit {
   position: absolute;
   margin: 0% 0% 0% 10%;
   min-height: 85vh;
@@ -13,32 +13,44 @@
   min-width: 35vw;
   max-width: 35vw;
   border: 0;
-  padding: 10px;
-  resize: none;
   border-radius: 10px;
+}
+
+.Notes-edit {
+  position: relative;
+  min-height: 85vh;
+  max-height: 85vh;
+  min-width: 35vw;
+  max-width: 35vw;
+  padding: 10px;
+  border: 0;
+  border-radius: 10px;
+  resize: none;
   outline: 0;
 }
 
-.Notes-display {
-  background-color: #484c54;
-  color: #e6dfdf;
+.Control-display {
+  position: relative;
   margin: 0% 10% 0% 0%;
   min-height: 85vh;
   max-height: 85vh;
   min-width: 35vw;
   max-width: 35vw;
   float: right;
+  border: 0;
+  border-radius: 10px;
+}
+
+.Notes-display {
+  background-color: #484c54;
+  color: #e6dfdf;
+  min-height: 85vh;
+  max-height: 85vh;
+  min-width: 35vw;
+  max-width: 35vw;
   padding: 10px;
   resize: none;
   border: 0;
   border-radius: 10px;
   outline: 0;
-}
-
-.Display-canvas {
-  position: relative;
-}
-
-.Edit-canvas {
-  position: relative;
 }
