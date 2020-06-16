@@ -1,5 +1,5 @@
 import React from 'react'
-import './Notepad.css'
+import '../styles/Notepad.css'
 import Format from './Format.js'
 import Edit from './Edit.js'
 

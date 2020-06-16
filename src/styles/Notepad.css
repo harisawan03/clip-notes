@@ -6,6 +6,7 @@
 }
 
 .Notes-edit {
+  position: absolute;
   margin: 0% 0% 0% 10%;
   min-height: 85vh;
   max-height: 85vh;
@@ -32,4 +33,12 @@
   border: 0;
   border-radius: 10px;
   outline: 0;
+}
+
+.Display-canvas {
+  position: relative;
+}
+
+.Edit-canvas {
+  position: relative;
 }
