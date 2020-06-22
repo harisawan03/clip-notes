@@ -18,7 +18,9 @@ export default class FullScreen extends React.Component {
         className="Toggle"
         type="button"
         // onClick={handleSizing}
-      >X</button>
+      >
+        <img src='../graphics/fullscreen.svg' alt="X" />
+      </button>
     )
   }
 }
