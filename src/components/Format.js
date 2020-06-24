@@ -3,6 +3,13 @@ import FullScreen from './FullScreen.js'
 
 // pass state of notepad as props and format it
 export default class Format extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      fullScreen: false
+    }
+  }
+
   render() {
     return(
       <div className="Control-display">
@@ -10,7 +17,7 @@ export default class Format extends React.Component {
           className="Notes-display"
           value={this.props.notes}
         />
-        <FullScreen />
+        <FullScreen sizing={this.state.fullScreen} />
       </div>
     )
   }

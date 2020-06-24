@@ -4,6 +4,9 @@ import FullScreen from './FullScreen.js'
 export default class Edit extends React.Component {
   constructor(props) {
     super(props)
+    this.state = {
+      fullScreen: false
+    }
   
     this.handleUserNotes = this.handleUserNotes.bind(this)
   }
@@ -21,7 +24,7 @@ export default class Edit extends React.Component {
           onChange={this.handleUserNotes}
           value={this.props.notes}        
         />
-        <FullScreen />
+        <FullScreen sizing={this.state.fullScreen} />
       </div>
     )
   }

@@ -7,7 +7,11 @@ export default class Notepad extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      userNotes: ''
+      userNotes: '',
+      fullScreen: {
+        edit: false,
+        display: false
+      }
     }
 
     this.handleNoteChange = this.handleNoteChange.bind(this)

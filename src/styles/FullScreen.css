@@ -1,8 +1,37 @@
 .Toggle {
   position: absolute;
-  right: 0;
-  top: 0;
+  right: -15px;
+  top: 5px;
   color: #000;
   background-color: transparent;
   border: none;
+  padding: 5px 5px 2px 5px;
+  max-width: 100%;
+}
+
+.Toggle:hover {
+  background-color: #000;
+  opacity: 20%;
+}
+
+.Control-hidden {
+  display: none;
+}
+
+.Notes-full {
+  position: absolute;
+  margin: 0% 10% 0% 10%;
+  min-width: 75vw;
+  max-width: 75vw;
+}
+
+.Notes-hidden {
+ display: none;
+}
+
+.Control-full {
+  position: absolute;
+  margin: 0% 10% 0% 10%;
+  min-width: 75vw;
+  max-width: 75vw;
 }
