@@ -1,16 +1,31 @@
+/* Styling for full screen button and full screen mode */
+
 .Toggle1 {
   position: absolute;
   right: -15px;
   top: 5px;
   color: #000;
   background-color: transparent;
-  border: none;
+  border: 2px;
   padding: 5px 5px 2px 5px;
   max-width: 100%;
+  border-color: #000000;
+  opacity: 0.6;
+  transition: 0.3s;
+  outline: none;
 }
 
 .Toggle1-full {
   z-index: 1;
+}
+
+.Toggle1:hover {
+  opacity: 1;
+  border-radius: 5px;
+}
+
+.Toggle1:active {
+  opacity: .4;
 }
 
 .Toggle2 {
@@ -22,19 +37,22 @@
   border: none;
   padding: 5px 5px 2px 5px;
   max-width: 100%;
+  opacity: 0.7;
+  transition: 0.3s;
+  outline: none;
 }
 
 .Toggle2-full {
   z-index: 1;
 }
 
-.Toggle1:hover {
-  background-color: #000;
-  opacity: 20%;
+.Toggle2:hover {
+  opacity: 1;
+  border-radius: 5px;
 }
 
-.Control-hidden {
-  display: none;
+.Toggle2:active {
+  opacity: .4;
 }
 
 .Notes-full {
@@ -49,10 +67,7 @@
   resize: none;
   outline: 0;
   z-index: 1;
-}
-
-.Notes-hidden {
- display: none;
+  transition: max-width .6s ease;
 }
 
 .Control-full {
@@ -60,11 +75,12 @@
   margin: 0% 0% 0% 10%;
   min-height: 85vh;
   max-height: 85vh;
-  min-width: 75vw;
-  max-width: 75vw;
+  min-width: 80vw;
+  max-width: 80vw;
   border: 0;
   border-radius: 10px;
   z-index: 1;
+  transition: max-width .6s ease;
 }
 
 /* need for proper coloring when in full screen */

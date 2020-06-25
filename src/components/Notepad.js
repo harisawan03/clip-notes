@@ -32,7 +32,6 @@ export default class Notepad extends React.Component {
         display: this.state.fullScreen.display
       }
     })
-    console.log("edit: " + this.state.fullScreen.edit)
   }
 
   handleDisplayToggle(size) {
@@ -42,7 +41,6 @@ export default class Notepad extends React.Component {
         display: size
       }
     })
-    console.log("display: " + this.state.fullScreen.display)
   }
 
   render() {
