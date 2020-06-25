@@ -67,7 +67,6 @@
   resize: none;
   outline: 0;
   z-index: 1;
-  transition: max-width .6s ease;
 }
 
 .Control-full {
@@ -80,7 +79,6 @@
   border: 0;
   border-radius: 10px;
   z-index: 1;
-  transition: max-width .6s ease;
 }
 
 /* need for proper coloring when in full screen */

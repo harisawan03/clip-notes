@@ -14,7 +14,6 @@
   max-width: 35vw;
   border: 0;
   border-radius: 10px;
-  transition: max-width .6s ease;
 }
 
 .Notes-edit {
@@ -28,7 +27,6 @@
   border-radius: 10px;
   resize: none;
   outline: 0;
-  transition: max-width .6s ease;
 }
 
 .Control-display {
@@ -41,7 +39,6 @@
   float: right;
   border: 0;
   border-radius: 10px;
-  transition: max-width .6s ease;
 }
 
 .Notes-display {
@@ -56,5 +53,4 @@
   border: 0;
   border-radius: 10px;
   outline: 0;
-  transition: max-width .6s ease;
 }
