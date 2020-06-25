@@ -5,24 +5,18 @@ import { ReactComponent as Toggle } from '../graphics/fullscreen.svg'
 export default class FullScreen extends React.Component {
   constructor(props) {
     super(props)
-    this.state = {
-      fullScreen: this.props.sizing
-    }
 
     this.toggleSizing = this.toggleSizing.bind(this)
   }
 
-  toggleSizing(e) {
-    this.setState({
-      fullScreen: !this.state.fullScreen
-    })
-    console.log(this.state.fullScreen)
+  toggleSizing() {
+    this.props.onSizeChange(!this.props.sizing)
   }
   
   render() {
     return(
       <button
-        className="Toggle"
+        className={this.props.toggle}
         type="button"
         onClick={this.toggleSizing}
       >

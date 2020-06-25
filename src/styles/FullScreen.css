@@ -1,4 +1,4 @@
-.Toggle {
+.Toggle1 {
   position: absolute;
   right: -15px;
   top: 5px;
@@ -9,7 +9,26 @@
   max-width: 100%;
 }
 
-.Toggle:hover {
+.Toggle1-full {
+  z-index: 1;
+}
+
+.Toggle2 {
+  position: absolute;
+  right: -15px;
+  top: 5px;
+  color: #000;
+  background-color: transparent;
+  border: none;
+  padding: 5px 5px 2px 5px;
+  max-width: 100%;
+}
+
+.Toggle2-full {
+  z-index: 1;
+}
+
+.Toggle1:hover {
   background-color: #000;
   opacity: 20%;
 }
@@ -19,10 +38,17 @@
 }
 
 .Notes-full {
-  position: absolute;
-  margin: 0% 10% 0% 10%;
-  min-width: 75vw;
-  max-width: 75vw;
+  position: relative;
+  min-height: 85vh;
+  max-height: 85vh;
+  min-width: 80vw;
+  max-width: 80vw;
+  padding: 10px;
+  border: 0;
+  border-radius: 10px;
+  resize: none;
+  outline: 0;
+  z-index: 1;
 }
 
 .Notes-hidden {
@@ -31,7 +57,18 @@
 
 .Control-full {
   position: absolute;
-  margin: 0% 10% 0% 10%;
+  margin: 0% 0% 0% 10%;
+  min-height: 85vh;
+  max-height: 85vh;
   min-width: 75vw;
   max-width: 75vw;
+  border: 0;
+  border-radius: 10px;
+  z-index: 1;
+}
+
+/* need for proper coloring when in full screen */
+.Display-color {
+  background-color: #484c54;
+  color: #e6dfdf;
 }

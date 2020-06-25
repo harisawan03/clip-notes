@@ -6,18 +6,31 @@ export default class Format extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      fullScreen: false
+      fullScreen: this.props.sizing
     }
+
+    this.handleSizeChange = this.handleSizeChange.bind(this)
+  }
+
+  handleSizeChange(size) {
+    this.setState({
+      fullScreen: size
+    })
+    this.props.onSizeToggle(this.state.fullScreen)
   }
 
   render() {
     return(
-      <div className="Control-display">
+      <div className={this.state.fullScreen ? "Control-full" : "Control-display"}>
         <textarea readOnly
-          className="Notes-display"
+          className={this.state.fullScreen ? "Notes-full Display-color" : "Notes-display"}
           value={this.props.notes}
         />
-        <FullScreen sizing={this.state.fullScreen} />
+        <FullScreen
+          sizing={this.state.fullScreen}
+          onSizeChange={this.handleSizeChange}
+          toggle={"Toggle2 " + (this.state.fullScreen ? "Toggle2-full" : null)}
+        />
       </div>
     )
   }

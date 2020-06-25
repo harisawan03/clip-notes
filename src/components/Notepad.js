@@ -15,6 +15,8 @@ export default class Notepad extends React.Component {
     }
 
     this.handleNoteChange = this.handleNoteChange.bind(this)
+    this.handleEditToggle = this.handleEditToggle.bind(this)
+    this.handleDisplayToggle = this.handleDisplayToggle.bind(this)
   }
 
   handleNoteChange(notes) {
@@ -23,15 +25,39 @@ export default class Notepad extends React.Component {
     })
   }
 
+  handleEditToggle(size) {
+    this.setState({
+      fullScreen: {
+        edit: size,
+        display: this.state.fullScreen.display
+      }
+    })
+    console.log("edit: " + this.state.fullScreen.edit)
+  }
+
+  handleDisplayToggle(size) {
+    this.setState({
+      fullScreen: {
+        edit: this.state.fullScreen.edit,
+        display: size
+      }
+    })
+    console.log("display: " + this.state.fullScreen.display)
+  }
+
   render() {
     return(
       <div className="Notepad">
         <Edit 
           notes={this.state.userNotes}
           onNoteChange={this.handleNoteChange}
+          sizing={this.state.fullScreen.edit}
+          onSizeToggle={this.handleEditToggle}
         />
         <Format 
           notes={this.state.userNotes}
+          sizing={this.state.fullScreen.display}
+          onSizeToggle={this.handleDisplayToggle}
         />
       </div>
     )
