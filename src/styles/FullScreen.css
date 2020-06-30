@@ -86,3 +86,7 @@
   background-color: #484c54;
   color: #e6dfdf;
 }
+
+.FS-button:active {
+  transition: all 4s ease;
+}

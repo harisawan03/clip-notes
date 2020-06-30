@@ -1,6 +1,7 @@
 import React from 'react'
 import '../styles/FullScreen.css'
-import { ReactComponent as Toggle } from '../graphics/fullscreen.svg'
+import { ReactComponent as Expand } from '../graphics/expand.svg'
+import { ReactComponent as Contract } from '../graphics/contract.svg'
 
 export default class FullScreen extends React.Component {
   constructor(props) {
@@ -20,7 +21,7 @@ export default class FullScreen extends React.Component {
         type="button"
         onClick={this.toggleSizing}
       >
-        <Toggle />
+        { this.props.sizing ? <Contract /> : <Expand /> }
       </button>
     )
   }
